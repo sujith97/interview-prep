@@ -1,6 +1,6 @@
 package org.home.interviewprep.linkedlist;
 
-public interface AdvancedLinkedListOperations<T> extends LinkedList<T> {
-	Node<T> middleNode();
+public abstract class AdvancedLinkedListOperations<T> extends LinkedList_1<T> {
+	abstract Node<T> getMiddleElement();
 
 }
