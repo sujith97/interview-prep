@@ -25,5 +25,11 @@ public class AdvancedLinkedListOperationsImpl_2<T> extends AdvancedLinkedListOpe
 		return middleNode;
 	}
 
+	@Override
+	LinkedList<T> getReverse() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 }

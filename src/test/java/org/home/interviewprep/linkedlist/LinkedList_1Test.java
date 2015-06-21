@@ -10,7 +10,8 @@ public class LinkedList_1Test {
 		ll1.insert(4);
 		ll1.insert(5);
 		
-		System.out.println("Middle: " + ll1.getMiddleElement());
+		System.out.println("Middle Element: " + ll1.getMiddleElement());
+		
 		
 	}
 
