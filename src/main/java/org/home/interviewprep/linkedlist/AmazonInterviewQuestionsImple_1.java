@@ -30,17 +30,16 @@ public class AmazonInterviewQuestionsImple_1<T> extends
 	@Override
 	LinkedList<T> getReverse() {
 		Node<T> temp = null;
-		if(rootNode!=null){
+		if (rootNode != null) {
 			temp = rootNode;
 			rootNode.setNext(null);
 		}
-		while(temp.getNext() != null) {
-		    		temp = temp.getNext().getNext();
-		    		temp.getNext().setNext(t);
-		    		
-				temp = rootNode.getNext();
-			
-			
+		while (temp.getNext() != null) {
+			temp = temp.getNext().getNext();
+			//temp.getNext().setNext(t);
+
+			temp = rootNode.getNext();
+
 		}
 		return null;
 	}
