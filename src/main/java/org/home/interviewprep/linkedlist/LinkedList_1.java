@@ -10,7 +10,7 @@ package org.home.interviewprep.linkedlist;
  *
  */
 public class LinkedList_1<T> implements LinkedList<T> {
-	private Node<T> rootNode;
+	protected Node<T> rootNode;
 	
 	public void insert(T content) {
 		Node<T> newNode;
