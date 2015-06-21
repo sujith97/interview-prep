@@ -12,7 +12,7 @@ public class AdvancedLinkedListOperationsImpl_2<T> extends AdvancedLinkedListOpe
 			while (i > 0) {
 				if (middleNodeDual.getNext() != null) {
 					middleNodeDual = middleNodeDual.getNext();
-					if (i == 2) {
+					if (i == 1) {
 						middleNode = middleNode.getNext();
 					}
 				} else {
