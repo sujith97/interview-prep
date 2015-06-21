@@ -4,27 +4,28 @@ package org.home.interviewprep.linkedlist;
 	Given an integer linked list of which both first half and second half are sorted independently.
 	Write a function to merge the two parts to create one single sorted linked list in place [do not use any extra space]. 
  */
-public class AmazonInterviewQuestionsImple_1 implements LinkedList {
+public class AmazonInterviewQuestionsImple_1<T> extends AdvancedLinkedListOperations<T> {
 
-	public void insert(Object content) {
-		// TODO Auto-generated method stub
+	@Override
+	Node<T> getMiddleElement() {
 		
-	}
-
-	public Node delete(Object content) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Node search(Object content) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public void printNodes() {
-		// TODO Auto-generated method stub
+		Node<T> pointer1 = rootNode;
+		Node<T> pointer2 = rootNode;
 		
-	}
+			while(pointer2!=null && pointer1!=null)
+			{
+				if(pointer2.getNext()!=null)
+				{
+				pointer2 = pointer2.getNext().getNext();
+				pointer1 = pointer1.getNext();
+				}
+				else
+					break;
+				
+			}
+		
 	
+	return pointer1;
 	
+}
 }
