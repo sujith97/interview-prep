@@ -4,14 +4,15 @@ public class LinkedList_1Test {
 
 	public static void main(String[] args) {
 		LinkedList<String> ll1 = new LinkedList_1<String>();
-		ll1.insert("Suj");
-		ll1.insert("Spoo");
-		ll1.insert("Vij");
+		AmazonInterviewQuestionsImple_1<String> ll2 = new AmazonInterviewQuestionsImple_1<String>();
+		ll2.insert("Suj");
+		ll2.insert("Spoo");
+		ll2.insert("Vij");	
+		ll2.insert("SpooSuji's Baby");	
+		ll2.printNodes();
 		
-		ll1.printNodes();
+		System.out.println("Middle Element: " + ll2.getMiddleElement());
 		
-		System.out.println("Searched: " + ll1.search("Suj"));
-		ll1.printNodes();
 		
 	}
 
