@@ -1,10 +1,10 @@
 package org.home.interviewprep.linkedlist;
 
 public abstract class AdvancedLinkedListOperations<T> extends LinkedList_1<T> {
-	protected abstract Node<T> getMiddleElement();
+	public abstract Node<T> getMiddleElement();
 	
-	protected abstract void reverseTheList() ;
+	public abstract void reverseTheList() ;
 	
-	protected abstract void mergeSortedLinkedLists(Node<Integer> rootNode1, Node<Integer> rootNode2); 
+	public abstract void mergeSortedLinkedLists(Node<? extends Integer> rootNode1, Node<? extends Integer> rootNode2); 
 		
 }
