@@ -1,4 +1,7 @@
-package org.home.interviewprep.linkedlist;
+package org.home.interviewprep.linkedlist.impl.sujith;
+
+import org.home.interviewprep.linkedlist.AdvancedLinkedListOperations;
+import org.home.interviewprep.linkedlist.Node;
 
 public class AdvancedLinkedListOperationsImpl_2<T> extends AdvancedLinkedListOperations<T> {
 
@@ -26,7 +29,13 @@ public class AdvancedLinkedListOperationsImpl_2<T> extends AdvancedLinkedListOpe
 	}
 
 	@Override
-	void reverseTheList() {
+	public void reverseTheList() {
+		
+	}
+
+	@Override
+	protected void mergeSortedLinkedLists(Node<T> rootNode1, Node<T> rootNode2) {
+		// TODO Auto-generated method stub
 		
 	}
 

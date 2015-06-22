@@ -1,4 +1,7 @@
-package org.home.interviewprep.linkedlist;
+package org.home.interviewprep.linkedlist.impl.spoorthy;
+
+import org.home.interviewprep.linkedlist.AdvancedLinkedListOperations;
+import org.home.interviewprep.linkedlist.Node;
 
 /**
  * Given an integer linked list of which both first half and second half are
@@ -9,7 +12,7 @@ public class AmazonInterviewQuestionsImple_1<T> extends
 		AdvancedLinkedListOperations<T> {
 
 	@Override
-	Node<T> getMiddleElement() {
+	public Node<T> getMiddleElement() {
 
 		Node<T> pointer1 = rootNode;
 		Node<T> pointer2 = rootNode;
@@ -28,7 +31,7 @@ public class AmazonInterviewQuestionsImple_1<T> extends
 	}
 
 	@Override
-	void reverseTheList() {
+	public void reverseTheList() {
 		Node<T> previousNode = rootNode;
 		Node<T> currentNode = null ;
 		Node<T> tempNode = null ;
@@ -45,5 +48,11 @@ public class AmazonInterviewQuestionsImple_1<T> extends
 
 		}
 		rootNode = previousNode;
+	}
+
+	@Override
+	protected void mergeSortedLinkedLists(Node<T> rootNode1, Node<T> rootNode2) {
+		// TODO Auto-generated method stub
+		
 	}
 }
