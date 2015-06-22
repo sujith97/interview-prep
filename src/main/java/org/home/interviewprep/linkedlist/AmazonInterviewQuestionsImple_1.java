@@ -15,7 +15,7 @@ public class AmazonInterviewQuestionsImple_1<T> extends
 		Node<T> pointer2 = rootNode;
 
 		while (pointer2 != null && pointer1 != null) {
-			if (pointer2.getNext() != null) {
+			if (pointer2.getNext() != null) { 
 				pointer2 = pointer2.getNext().getNext();
 				pointer1 = pointer1.getNext();
 			} else
@@ -28,19 +28,22 @@ public class AmazonInterviewQuestionsImple_1<T> extends
 	}
 
 	@Override
-	LinkedList<T> getReverse() {
-		Node<T> temp = null;
+	void reverseTheList() {
+		Node<T> previousNode = rootNode;
+		Node<T> currentNode = null ;
+		Node<T> tempNode = null ;
 		if (rootNode != null) {
-			temp = rootNode;
+			currentNode =tempNode= rootNode.getNext();//2nd
 			rootNode.setNext(null);
 		}
-		while (temp.getNext() != null) {
-			temp = temp.getNext().getNext();
-			//temp.getNext().setNext(t);
-
-			temp = rootNode.getNext();
+		while (tempNode!= null) {
+			
+			tempNode = currentNode.getNext();//3rd,4th,5th
+			currentNode.setNext(previousNode);//root,2nd,3rd,
+			previousNode = currentNode;//2nd,3rd,4th	
+			currentNode= tempNode;
 
 		}
-		return null;
+		rootNode = previousNode;
 	}
 }

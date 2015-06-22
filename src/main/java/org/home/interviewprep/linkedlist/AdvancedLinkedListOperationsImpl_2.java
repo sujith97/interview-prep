@@ -26,9 +26,8 @@ public class AdvancedLinkedListOperationsImpl_2<T> extends AdvancedLinkedListOpe
 	}
 
 	@Override
-	LinkedList<T> getReverse() {
-		// TODO Auto-generated method stub
-		return null;
+	void reverseTheList() {
+		
 	}
 
 	
