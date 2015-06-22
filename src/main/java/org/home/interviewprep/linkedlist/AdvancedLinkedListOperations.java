@@ -5,6 +5,6 @@ public abstract class AdvancedLinkedListOperations<T> extends LinkedList_1<T> {
 	
 	protected abstract void reverseTheList() ;
 	
-	protected abstract void mergeSortedLinkedLists(Node<T> rootNode1, Node<T> rootNode2); 
+	protected abstract void mergeSortedLinkedLists(Node<Integer> rootNode1, Node<Integer> rootNode2); 
 		
 }
