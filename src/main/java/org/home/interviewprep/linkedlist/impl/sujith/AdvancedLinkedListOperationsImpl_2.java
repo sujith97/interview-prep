@@ -35,7 +35,7 @@ public class AdvancedLinkedListOperationsImpl_2<T> extends AdvancedLinkedListOpe
 
 	@Override
 	protected void mergeSortedLinkedLists(Node<T> rootNode1, Node<T> rootNode2) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
