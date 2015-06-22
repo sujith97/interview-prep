@@ -34,9 +34,8 @@ public class AdvancedLinkedListOperationsImpl_2<T> extends AdvancedLinkedListOpe
 	}
 
 	@Override
-	protected void mergeSortedLinkedLists(Node<T> rootNode1, Node<T> rootNode2) {
-		// TODO Auto-generated method stub
-		
+	public void mergeSortedLinkedLists(Node<? extends Integer> rootNode1, Node<? extends Integer> rootNode2) {
+		// Now you cab safely typecast to (Integer) => (Integer)rootNode1.getDataContent()
 	}
 
 	

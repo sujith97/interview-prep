@@ -51,8 +51,10 @@ public class AmazonInterviewQuestionsImple_1<T> extends
 	}
 
 	@Override
-	protected void mergeSortedLinkedLists(Node<T> rootNode1, Node<T> rootNode2) {
+	public void mergeSortedLinkedLists(Node<? extends Integer> rootNode1, Node<? extends Integer> rootNode2) {
 		// TODO Auto-generated method stub
 		
 	}
+
+	
 }
