@@ -50,9 +50,39 @@ public class AmazonInterviewQuestionsImple_1<T> extends
 		rootNode = previousNode;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	protected void mergeSortedLinkedLists(Node<T> rootNode1, Node<T> rootNode2) {
-		// TODO Auto-generated method stub
+	protected void mergeSortedLinkedLists(Node<Integer> rootNode1, Node<Integer> rootNode2) {
+	Node<Integer> tempNode = null;
+		if(rootNode1==null){
+			tempNode = rootNode1;
+		}
+		else if(rootNode2 == null)
+		{
+			tempNode = rootNode2;			
+		}
+		else if(rootNode1!=null &&rootNode2!=null)
+		{
+			while(rootNode1.getNext()!=null && rootNode2.getNext()!=null){
+				if(rootNode1.getDataContent()>=rootNode2.getDataContent()){
+					rootNode = (Node<T>) rootNode1;
+					
+				}
+				else if(rootNode1.getDataContent()>rootNode2.getDataContent()){
+					rootNode = (Node<T>) rootNode2;
+					rootNode2 = rootNode1.getNext();
+				}
+			}
+			while(rootNode1.getNext()!=null)
+			{
+				tempNode = rootNode1.getNext();
+			}
+			while(rootNode2.getNext()!=null)
+			{
+				tempNode = rootNode2.getNext();
+			}
+			
+		}
 		
 	}
 }
