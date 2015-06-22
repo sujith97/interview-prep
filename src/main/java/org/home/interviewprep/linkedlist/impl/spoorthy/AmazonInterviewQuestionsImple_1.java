@@ -51,8 +51,8 @@ public class AmazonInterviewQuestionsImple_1<T> extends
 	}
 
 
-	public void mergeSortedLinkedLists(Node<? extends Integer> rootNode1, Node<? extends Integer> rootNode2) {
-		Node<?> tempNode = null;
+	public void mergeSortedLinkedLists(Node<Integer> rootNode1, Node<Integer> rootNode2) {
+		Node<Integer> tempNode = null;
 		if(rootNode1==null){
 			tempNode = rootNode1;
 		}
@@ -62,7 +62,8 @@ public class AmazonInterviewQuestionsImple_1<T> extends
 		else if(rootNode1!=null &&rootNode2!=null){
 			while(rootNode1.getNext()!=null && rootNode2.getNext()!=null){
 				if(rootNode1.getDataContent() >= rootNode2.getDataContent()){
-					 
+					 tempNode = rootNode1;
+					 tempNode.setNext(rootNode1.getNext());
 					
 				}
 				else if(rootNode1.getDataContent()>rootNode2.getDataContent()){
