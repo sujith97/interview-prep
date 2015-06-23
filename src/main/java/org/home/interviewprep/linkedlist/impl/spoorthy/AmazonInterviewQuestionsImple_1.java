@@ -50,36 +50,43 @@ public class AmazonInterviewQuestionsImple_1<T> extends
 		rootNode = previousNode;
 	}
 
-
-	public void mergeSortedLinkedLists(Node<Integer> rootNode1, Node<Integer> rootNode2) {
-		Node<Integer> tempNode = null;
-		if(rootNode1==null){
-			tempNode = rootNode1;
-		}
-		else if(rootNode2 == null){
-			tempNode = rootNode2;			
-		}
-		else if(rootNode1!=null &&rootNode2!=null){
+	@Override
+	public Node<Integer> mergeSortedLinkedLists(Node<Integer> rootNode1, Node<Integer> rootNode2) {
+		Node<Integer> parentNode = null;
+		if(rootNode1!=null &&rootNode2!=null){
+			
 			while(rootNode1.getNext()!=null && rootNode2.getNext()!=null){
-				if(rootNode1.getDataContent() >= rootNode2.getDataContent()){
-					 tempNode = rootNode1;
-					 tempNode.setNext(rootNode1.getNext());
-					
-				}
-				else if(rootNode1.getDataContent()>rootNode2.getDataContent()){
-					
-					rootNode2 = rootNode1.getNext();
+				// 7 10 11 14 15  16
+				// 3 6 8  9
+				if(rootNode1.getDataContent() > rootNode2.getDataContent()){
+					if (parentNode == null) {
+						parentNode = rootNode2; // pn = 3
+					} else {
+						parentNode.setNext(rootNode2); //3-6
+						parentNode = parentNode.getNext();// 6
+					}
+					rootNode2 = rootNode2.getNext();// 6
+				} else {
+					if (parentNode == null) {
+						parentNode = rootNode1;
+					}
+					else {
+						parentNode.setNext(rootNode1);
+						parentNode = parentNode.getNext();
+					}
+					rootNode1 = rootNode1.getNext();
 				}
 			}
 			while(rootNode1.getNext()!=null)
 			{
-				tempNode = rootNode1.getNext();
+				parentNode.setNext(rootNode1.getNext());
 			}
 			while(rootNode2.getNext()!=null)
 			{
-				tempNode = rootNode2.getNext();
+				parentNode.setNext(rootNode2.getNext());
 			}		
 	}
+		return parentNode;
 	}
 	
 }

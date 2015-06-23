@@ -34,7 +34,8 @@ public class AdvancedLinkedListOperationsImpl_2<T> extends AdvancedLinkedListOpe
 	}
 
 
-	public void mergeSortedLinkedLists(Node<Integer> rootNode1, Node<Integer> rootNode2) {
+	public Node<Integer> mergeSortedLinkedLists(Node<Integer> rootNode1, Node<Integer> rootNode2) {
+		return rootNode2;
 		// Now you cab safely typecast to (Integer) => (Integer)rootNode1.getDataContent()
 	}
 
