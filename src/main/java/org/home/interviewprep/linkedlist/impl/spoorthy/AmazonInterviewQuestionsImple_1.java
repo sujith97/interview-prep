@@ -1,6 +1,6 @@
 package org.home.interviewprep.linkedlist.impl.spoorthy;
 
-import org.home.interviewprep.core.Node;
+import org.home.interviewprep.core.SinglyLinkedNode;
 import org.home.interviewprep.linkedlist.AdvancedLinkedListOperations;
 
 /**
@@ -12,10 +12,10 @@ public class AmazonInterviewQuestionsImple_1<T> extends
 		AdvancedLinkedListOperations<T> {
 
 	@Override
-	public Node<T> getMiddleElement() {
+	public SinglyLinkedNode<T> getMiddleElement() {
 
-		Node<T> pointer1 = rootNode;
-		Node<T> pointer2 = rootNode;
+		SinglyLinkedNode<T> pointer1 = rootNode;
+		SinglyLinkedNode<T> pointer2 = rootNode;
 
 		while (pointer2 != null && pointer1 != null) {
 			if (pointer2.getNext() != null) { 
@@ -32,9 +32,9 @@ public class AmazonInterviewQuestionsImple_1<T> extends
 
 	@Override
 	public void reverseTheList() {
-		Node<T> previousNode = rootNode;
-		Node<T> currentNode = null ;
-		Node<T> tempNode = null ;
+		SinglyLinkedNode<T> previousNode = rootNode;
+		SinglyLinkedNode<T> currentNode = null ;
+		SinglyLinkedNode<T> tempNode = null ;
 		if (rootNode != null) {
 			currentNode =tempNode= rootNode.getNext();//2nd
 			rootNode.setNext(null);
@@ -51,8 +51,8 @@ public class AmazonInterviewQuestionsImple_1<T> extends
 	}
 
 	@Override
-	public Node<Integer> mergeSortedLinkedLists(Node<Integer> rootNode1, Node<Integer> rootNode2) {
-		Node<Integer> parentNode = null;
+	public SinglyLinkedNode<Integer> mergeSortedLinkedLists(SinglyLinkedNode<Integer> rootNode1, SinglyLinkedNode<Integer> rootNode2) {
+		SinglyLinkedNode<Integer> parentNode = null;
 		if(rootNode1!=null &&rootNode2!=null){
 			
 			while(rootNode1.getNext()!=null && rootNode2.getNext()!=null){

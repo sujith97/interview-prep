@@ -1,8 +1,8 @@
 package org.home.interviewprep.core;
 
-public class Node<T> {
+public class SinglyLinkedNode<T> {
 	private T dataContent;
-	private Node<T> next;
+	private SinglyLinkedNode<T> next;
 	
 	/**
 	 * @return the dataContent
@@ -19,13 +19,13 @@ public class Node<T> {
 	/**
 	 * @return the next
 	 */
-	public Node<T> getNext() {
+	public SinglyLinkedNode<T> getNext() {
 		return next;
 	}
 	/**
 	 * @param next the next to set
 	 */
-	public void setNext(Node<T> next) {
+	public void setNext(SinglyLinkedNode<T> next) {
 		this.next = next;
 	}
 	

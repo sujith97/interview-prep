@@ -1,6 +1,6 @@
 package org.home.interviewprep.linkedlist.impl.sujith;
 
-import org.home.interviewprep.core.Node;
+import org.home.interviewprep.core.SinglyLinkedNode;
 import org.home.interviewprep.linkedlist.LinkedList;
 
 /**
@@ -13,30 +13,30 @@ import org.home.interviewprep.linkedlist.LinkedList;
  *
  */
 public class LinkedListImpl<T> implements LinkedList<T> {
-	protected Node<T> rootNode;
+	protected SinglyLinkedNode<T> rootNode;
 	
 	public void insert(T content) {
-		Node<T> newNode;
+		SinglyLinkedNode<T> newNode;
 		
 		if (rootNode == null) {
-			newNode = rootNode = new Node<T>();
+			newNode = rootNode = new SinglyLinkedNode<T>();
 		} else {
 			newNode = rootNode;
 			while (newNode.getNext() != null) {
 				newNode = newNode.getNext();
 			}
 			// If the leaf node's next is null, it reaches here and the new node will have the leaf node content;
-			Node<T> tempNode = newNode;
-			newNode = new Node<T>();
+			SinglyLinkedNode<T> tempNode = newNode;
+			newNode = new SinglyLinkedNode<T>();
 			tempNode.setNext(newNode);
 		}
 		newNode.setDataContent(content);
 	}
 
 	
-	public Node<T> delete(T content) {
+	public SinglyLinkedNode<T> delete(T content) {
 		
-		Node<T> currentParent, tempNode;
+		SinglyLinkedNode<T> currentParent, tempNode;
 		currentParent = tempNode = rootNode;
 		
 		while(tempNode != null) {
@@ -56,8 +56,8 @@ public class LinkedListImpl<T> implements LinkedList<T> {
 		return tempNode;
 	}
 
-	public Node<T> search(T content) {
-		Node<T> tempNode = rootNode;
+	public SinglyLinkedNode<T> search(T content) {
+		SinglyLinkedNode<T> tempNode = rootNode;
 		while(tempNode != null) {
 			if(content.equals(tempNode.getDataContent())) {
 				break;
@@ -72,7 +72,7 @@ public class LinkedListImpl<T> implements LinkedList<T> {
 
 	public void printNodes() {
 		if (rootNode != null) {
-			Node<T> pointer = rootNode;
+			SinglyLinkedNode<T> pointer = rootNode;
 			System.out.print("[");
 			do {
 				System.out.print(pointer.getDataContent() + ","); // The last value will have a ',' which has to be corrected in future.

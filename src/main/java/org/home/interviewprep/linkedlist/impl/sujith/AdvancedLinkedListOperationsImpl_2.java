@@ -1,13 +1,13 @@
 package org.home.interviewprep.linkedlist.impl.sujith;
 
-import org.home.interviewprep.core.Node;
+import org.home.interviewprep.core.SinglyLinkedNode;
 import org.home.interviewprep.linkedlist.AdvancedLinkedListOperations;
 
 public class AdvancedLinkedListOperationsImpl_2<T> extends AdvancedLinkedListOperations<T> {
 
 	@Override
-	public Node<T> getMiddleElement() {
-		Node<T> middleNode, middleNodeDual;
+	public SinglyLinkedNode<T> getMiddleElement() {
+		SinglyLinkedNode<T> middleNode, middleNodeDual;
 		middleNode = middleNodeDual = rootNode;
 		
 		while(middleNodeDual != null && middleNodeDual.getNext() != null) {
@@ -34,7 +34,7 @@ public class AdvancedLinkedListOperationsImpl_2<T> extends AdvancedLinkedListOpe
 	}
 
 
-	public Node<Integer> mergeSortedLinkedLists(Node<Integer> rootNode1, Node<Integer> rootNode2) {
+	public SinglyLinkedNode<Integer> mergeSortedLinkedLists(SinglyLinkedNode<Integer> rootNode1, SinglyLinkedNode<Integer> rootNode2) {
 		return rootNode2;
 		// Now you cab safely typecast to (Integer) => (Integer)rootNode1.getDataContent()
 	}
