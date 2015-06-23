@@ -1,7 +1,7 @@
 package org.home.interviewprep.linkedlist.impl.spoorthy;
 
+import org.home.interviewprep.core.Node;
 import org.home.interviewprep.linkedlist.AdvancedLinkedListOperations;
-import org.home.interviewprep.linkedlist.Node;
 
 /**
  * Given an integer linked list of which both first half and second half are

@@ -1,4 +1,7 @@
-package org.home.interviewprep.linkedlist;
+package org.home.interviewprep.linkedlist.impl.sujith;
+
+import org.home.interviewprep.core.Node;
+import org.home.interviewprep.linkedlist.LinkedList;
 
 /**
  * This linked list will have 
@@ -9,7 +12,7 @@ package org.home.interviewprep.linkedlist;
  * @author sujithrb
  *
  */
-public class LinkedList_1<T> implements LinkedList<T> {
+public class LinkedListImpl<T> implements LinkedList<T> {
 	protected Node<T> rootNode;
 	
 	public void insert(T content) {

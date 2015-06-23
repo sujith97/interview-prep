@@ -1,7 +1,7 @@
 package org.home.interviewprep.linkedlist.impl.sujith;
 
+import org.home.interviewprep.core.Node;
 import org.home.interviewprep.linkedlist.AdvancedLinkedListOperations;
-import org.home.interviewprep.linkedlist.Node;
 
 public class AdvancedLinkedListOperationsImpl_2<T> extends AdvancedLinkedListOperations<T> {
 

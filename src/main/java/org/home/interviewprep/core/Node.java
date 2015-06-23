@@ -1,4 +1,4 @@
-package org.home.interviewprep.linkedlist;
+package org.home.interviewprep.core;
 
 public class Node<T> {
 	private T dataContent;
