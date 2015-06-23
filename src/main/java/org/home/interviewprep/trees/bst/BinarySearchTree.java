@@ -1,12 +1,14 @@
 package org.home.interviewprep.trees.bst;
 
+import java.util.List;
+
 /**
  * Binary Search Tree
  * @author sujithrb
  *
  * @param <T> the type of BST
  */
-public interface BinarySearchTree<T> {
+public interface BinarySearchTree<T extends Number> {
 	
 	/**
 	 * Insert into a BST.
@@ -41,7 +43,7 @@ public interface BinarySearchTree<T> {
 	 * @param traversal the traversal types.
 	 * @return traversal result. Will be null if traversal fails.
 	 */
-	T[] doTraversal(final Traversal traversal);
+	List<T> doTraversal(final Traversal traversal);
 	
 	/**
 	 * Balance the BST.

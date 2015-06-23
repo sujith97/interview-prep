@@ -24,6 +24,14 @@ public class DoublyLinkedNode<T> {
 	private DoublyLinkedNode<T> rightNode;
 	
 	/**
+	 * Constructor.
+	 * @param dataContent data.
+	 */
+	public DoublyLinkedNode(final T dataContent) {
+		this.dataContent = dataContent;
+	}
+	
+	/**
 	 * @return the dataContent
 	 */
 	public T getDataContent() {

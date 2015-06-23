@@ -1,8 +1,10 @@
 package org.home.interviewprep.trees.bst.impl.spoorthy;
 
+import java.util.List;
+
 import org.home.interviewprep.trees.bst.BinarySearchTree;
 
-public class BinarySearchTreeImpl<T> implements BinarySearchTree<T> {
+public class BinarySearchTreeImpl<T extends Integer> implements BinarySearchTree<T> {
 
 	public void insert(T data) {
 		// TODO Auto-generated method stub
@@ -19,7 +21,7 @@ public class BinarySearchTreeImpl<T> implements BinarySearchTree<T> {
 		return null;
 	}
 
-	public T[] doTraversal(
+	public List<T> doTraversal(
 			org.home.interviewprep.trees.bst.BinarySearchTree.Traversal traversal) {
 		// TODO Auto-generated method stub
 		return null;
