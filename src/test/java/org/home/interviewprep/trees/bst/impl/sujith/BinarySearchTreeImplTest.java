@@ -7,6 +7,11 @@ import org.home.interviewprep.trees.bst.BinarySearchTree.Traversal;
 import org.junit.Assert;
 import org.junit.Test;
 
+/**
+ * Test case for BST
+ * @author sujithrb
+ *
+ */
 public class BinarySearchTreeImplTest {
 
 	@Test
